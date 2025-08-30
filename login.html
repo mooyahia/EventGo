@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="CSS/login.css" />
+    
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Po1OWPpZxoy_brtXq",
+      });
+   })();
+</script>
+
+  </head>
+  <body>
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <form action="">
+            <div class="logo">
+              <img src="images/logo.png" alt="" width="80px" height="50px" />
+            </div>
+            <h2>Login</h2>
+
+ <!-- ============= Email Section =============================================================================================================================================================== -->
+            <div class="input-box">
+              <i class="fa-regular fa-envelope i"></i>
+              <input type="email" required id="email" placeholder=" "/>
+              <label for="email">Email</label>
+              <div class="emailAlert" id="emailAlert"><span  ><i class="fa-solid fa-circle-exclamation" style="color: black;"></i></span>  <span>Email incorrect or Not exists</span> </div>
+            </div>
+
+ <!-- ============= Password Section =============================================================================================================================================================== -->
+            <div class="input-box">
+              <i class="fa-solid fa-eye-slash i" id="eyeslash-icon" onclick="show()"></i>
+              <i class="fa-solid fa-eye i" id="eye-icon" onclick="show()"></i>
+              <input type="password" required id="password"  placeholder=" "/>
+              <label for="password" id="passlabel">Password</label>
+              <div class="passwordAlert" id="passwordAlert"><span  ><i class="fa-solid fa-circle-exclamation" style="color: black;"></i></span><span>Password is Incorrect please try again</span></div>
+            </div>
+
+ <!-- ============= Remember & Forget Password Section =============================================================================================================================================================== -->
+            <div class="forget-Remember">
+              <div>
+                <input type="checkbox" id="rememberMe" /><label for="rememberMe"
+                  >Remember Me</label
+                >
+              </div>
+              <a href="sendVerficationCode.html">Forget Password?</a>
+            </div>
+
+
+ <!-- ============= Login Button & Register Link Section =============================================================================================================================================================== -->
+            <div class="login-Register">
+              <button type="button" id="login">Login</button>
+              <p class="accreg">
+                Don't have an account?<a href="register.html"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="java/login.js"></script>
+  </body>
+</html>

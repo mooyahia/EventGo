@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="CSS/Dashboard.css">
+</head>
+<body>
+
+  <!-- ====================================== Start Vertical Nav Bar =============================-->
+
+<div class="menu">
+  <ul>
+    <li class="profile">
+      <a href="index.html"><h3>Event Go</h3></a>
+    </li>
+    <li class="spec">
+      <a href="#">
+      <i class="fas fa-home"></i>
+        <p>Home</p>
+      </a>
+    </li>
+    <li>
+      <a href="Schedule.html">
+        <i class="fa-solid fa-calendar-days"></i>
+        <p>Events</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fas fa-user-group"></i>
+        <p>Users</p>
+      </a>
+    </li>
+    <li>
+      <a href="Booking.html">
+        <i class="fas fa-table"></i>
+        <p>Bookings</p>
+      </a>
+    </li>
+    <li>
+      <a href="speakers crud.html">
+        <i class="fas fa-pen"></i>
+        <p>Speakers</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- ==================================== Start Counter Boxes  ======================================================= -->
+ 
+<div class="content">
+  <div class="content-info">
+    <div class="box">
+      <i class="fa-solid fa-calendar-days"></i>
+      <div class="text" >
+        <p>Total Events</p>
+        <span id="total"></span>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fas fa-user-group"></i>
+      <div class="text">
+        <p>users</p>
+        <span id="totaluser"></span>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fa-brands fa-speaker-deck"></i>
+      <div class="text">
+        <p>Speakers</p>
+        <span id="totalSpeakers"></span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ====================================== Start Inputs To Adding Events ================================== -->
+
+  <div class="m-auto py-5 parent">
+        <div class="mb-4">
+            <label for="eventsName" class="mb-3 fs-5">event Name</label>
+            <input type="text" id="eventsName" class="form-control ">
+        </div>
+        <div class="mb-4">
+            <label for="eventsDescription" class="mb-3 fs-5">event Description</label>
+            <input type="text" id="eventsDescription" class="form-control ">
+        </div>
+        <div class="mb-4"> 
+            <label for="eventDate" class="mb-3 fs-5">event Date</label>
+            <input type="date" id="eventDate" class="form-control ">
+        </div>
+        <div class="mb-4"> 
+            <label for="eventTime" class="mb-3 fs-5">event Time</label>
+            <input type="time" id="eventTime" class="form-control ">
+        </div>
+        <div class="mb-4">
+            <label for="eventLocation" class="mb-3 fs-5">event Location</label>
+            <input type="text" id="eventLocation" class="form-control ">
+        </div>
+        <div class="mb-4">
+            <label for="eventCapacity" class="mb-3 fs-5">event Capacity</label>
+            <input type="number" id="eventCapacity" class="form-control ">
+        </div>
+        <div class="mb-4">
+            <label for="eventPrice" class="mb-3 fs-5">event Price</label>
+            <input type="number" id="eventPrice" class="form-control ">
+        </div>
+          <button class="btn butt " id="btnAddEvents" onclick="addEvents()">+ Add Event</button>
+          <div class="container w-100 m-auto py-5">
+      <div class="mb-3">
+        <input
+          id="search"
+          placeholder="search..."
+          type="text"
+          class="form-control"
+        />
+      </div>
+  </div>
+
+    <!-- ====================================== Start  Table That Contain Events ================================== -->
+
+  <div class="tb table-responsive m-auto w-100">
+    <h3>Events List</h3>
+  <table >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Location</th>
+            <th>Capacity</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tBody" class="m-auto w-100" >
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="java/Dashboard.js"></script>
+  </body>
+</html>
+
+

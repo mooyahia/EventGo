@@ -1,0 +1,214 @@
+:root {
+  --primary-color: #1c6ea4; 
+  --secondary-color: #154d71; 
+  --button-color: #33a1e0; 
+  --text-color: #f6f6f6; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--secondary-color);
+  padding: 15px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.register-form-box {
+  background: var(--primary-color);
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.register-form-box .register-form-value img {
+  display: block;
+  margin: -30px auto 0;
+  width: 80px;
+  height: auto;
+}
+
+.register-form-box h2 {
+  text-align: center;
+  font-size: 26px;
+  margin: 5px 0 25px;
+  color: var(--text-color);
+}
+
+.registerationInput {
+  position: relative;
+  margin: 20px 0;
+}
+
+.registerationInput input {
+  width: 100%;
+  padding: 14px 40px 14px 12px;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.registerationInput input:focus {
+  box-shadow: 0 0 5px var(--button-color);
+}
+
+.registerationInput label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.registerationInput input:focus ~ label,
+.registerationInput input:not(:placeholder-shown) ~ label {
+  top: -1px;
+  left: 10px;
+  font-size: 14px;
+  color: var(--text-color);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+
+
+.password i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+}
+#eye-icon {
+  visibility: hidden;
+}
+
+
+.btn button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--button-color);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn button a{
+  color: var(--text-color);
+
+}
+
+.btn button:hover {
+  background: var(--secondary-color);
+
+}
+.btn button:hover a{
+    color: var(--text-color);
+    text-decoration: underline;
+
+}
+
+
+.btn p {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -20px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.btn p a {
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.btn p a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .register-form-box {
+    padding: 25px 20px;
+    margin: 0 20px;
+  }
+
+  .register-form-box h2 {
+    font-size: 22px;
+  }
+
+  .registerationInput input {
+    font-size: 14px;
+    padding: 12px 35px 12px 10px;
+  }
+
+  .btn button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+.emailAlert {
+  width: 100%;
+  font-size: 14px;
+  background-color: rgb(247, 200, 200);
+  border-radius: 5px;
+  top: 35px;
+  padding: 5px;
+  margin-top: 15px;
+display: none;
+}
+
+.passAlert{
+  display: none;
+  background-color: rgb(221, 196, 196);
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.passAlert div{
+  margin-bottom: 5px;
+}
+
+.passConfirmAlert{
+  display: none;
+  color: red;
+  background-color: rgb(221, 196, 196);
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: 500;
+}
