@@ -1,0 +1,131 @@
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+    scroll-behavior:smooth;
+}
+:root{
+    --main-color: #1A2A80;
+    --secondry-color:#3B38A0;
+    --third-color:#7A85C1;
+}
+body::selection{
+  background-color: var(--secondry-color);
+  color: white;
+}
+
+/* =====Header===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--text-color);
+}
+.navbar ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 50px;
+  font-size: 18px;
+  transition-duration: 0.5s;
+}
+.dropdown-menu {
+  border-radius: 12px;
+  border: none;
+}
+.dropdown-menu .dropdown-item {
+  margin-left: 0;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  transition-duration: 0.3s;
+  border-radius: 8px;
+}
+.navbar ul li a:hover {
+  color: var(--secondry-color);
+  font-size: 20px;
+  border-bottom: var(--secondry-color) 3px solid;
+}
+
+.profile-icon{
+  display: none;
+}
+
+/* body {
+  background: rgb(228, 223, 223);
+  font-family: 'Tajawal', sans-serif;
+} */
+body { background:#f8f9fa; }
+ .container { max-width:600px; margin-top:40px;
+margin-bottom: 50px; 
+margin-top: 50px; }
+
+/*======footer=== */
+.footer {
+  background-color:#154D71;
+  color: white;
+  padding: 40px 20px 10px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-section h3,
+.footer-section h4 {
+  color: white;
+  font-weight: bold;
+}
+.footer-section p, .footer-section ul {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.footer-section ul {
+  list-style: none;
+  margin-top: 5px;
+}
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+.footer-section ul li a:hover {
+  color:var(--secondry-color);
+}
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ddd;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color:#154D71;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid #444;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 470px) {
+.footer-container{
+  display: grid;
+}
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+}

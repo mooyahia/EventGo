@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: capitalize;
+}
+:root {
+  --main-color: #1c6ea4;
+  --secondary-color: #154d71;
+  --third-color: #33a1e0;
+  --text-color: #f6f6f6;
+}
+body {
+  display: flex;
+}
+
+/* ====================================== Start Vertical Nav Bar =============================  */
+
+.menu {
+  width: 140px;
+  height: 100vh;
+  padding: 20px;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  background-color: var(--main-color);
+}
+.menu:hover {
+  width: 250px;
+}
+.menu ul {
+  list-style: none;
+  height: 95%;
+  position: relative;
+}
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 8px;
+  transition-duration: 0.3s;
+}
+ul li a:hover,
+.spec {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+.box:hover {
+  background-color: var(--third-color);
+}
+ul li a i {
+  font-size: 30px;
+}
+
+/*======================================== Start Counter Boxes  ================================================*/
+
+.content {
+  width: 100%;
+  margin-left: 10px;
+}
+.content-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+.box {
+  background-color: var(--secondary-color);
+  height: 150px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  border-radius: 15px;
+}
+.box i {
+  font-size: 40px;
+}
+.box .text {
+  text-align: center;
+}
+.text span {
+  font-size: 30px;
+}
+.parent {
+  width: 85%;
+}
+
+/*====================================== Start  Table That Contain Events ==================================*/
+
+table {
+  overflow: hidden;
+}
+label {
+  color: var(--main-color);
+}
+.butt {
+  color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+}
+.butt:hover {
+  background-color: var(--secondary-color);
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+.tb {
+  border: 3px solid var(--main-color);
+}
+.tb h3 {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+button i {
+  color: var(--secondary-color);
+}
+@media (max-width: 650px) {
+  .menu {
+    display: none;
+  }
+}
+
+table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+table thead {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+table td {
+  color: var(--main-color);
+}
+table th,
+table td {
+  padding: 1rem;
+  text-align: center;
+  width: 25%;
+}
+table tr:nth-child(even) {
+  background: #eee;
+}
+.span {
+  display: none;
+}
+button {
+  background: var(--third-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: var(--secondary-color);
+}
+div.description {
+  position: relative;
+  z-index: 100;
+  margin: auto;
+  width: 350px;
+}
+div.description-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--main-color);
+}
+
+div.description-card img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+div.description a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 15px;
+}
+button.search {
+  background-color: var(--third-color);
+  color: var(--text-color);
+}
+button.search:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+@media (max-width: 470px) {
+.footer-container{
+  display: grid;
+}
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/superAdminDashboard.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- ========= Vertical Nav Bar Begin ======================================================================================================================== -->
+<div class="menu">
+  <ul>
+    <li class="profile">
+      <a href="index.html"><h3>Event Go</h3></a>
+    </li>
+    <li class="spec" id="addAdminFormShow">
+      <a href="#">
+      <i class="fas fa-home"></i>
+        <p>Home</p>
+      </a>
+    </li>
+    <li id="superAdminListShow">
+      <a href="#">
+              <i class="fa-solid fa-user-gear"></i>
+        <p>Super Admins</p>
+      </a>
+    </li>
+    <li id="adminListShow">
+      <a href="#">
+              <i class="fa-solid fa-user-tie"></i>
+        <p>Admin</p>
+
+      </a>
+    </li>
+    <li id="userListShow">
+      <a href="#">
+        <i class="fas fa-user-group"></i>
+        <p>Users</p>
+      </a>
+    </li>
+  </ul>
+ </div>
+<!-- ========= Vertical Nav Bar End ======================================================================================================================== -->
+
+
+
+
+<!-- ========= Counter Boxes Begin ======================================================================================================================== -->
+ <div class="content">
+  <div class="content-info">
+    <div class="box " id="superAdminBox">
+      <i class="fa-solid fa-user-gear"></i>
+      <div class="text">
+        <p>Super Admins</p>
+        <span  id="superAdminCount" ></span>
+      </div>
+    </div>
+    <div class="box" >
+      <i class="fa-solid fa-user-tie"></i>
+      <div class="text">
+        <p>Admins</p>
+        <span id="adminCount"></span>
+        
+      </div>
+    </div>
+    <div class="box" id="userBox">
+      <i class="fas fa-user-group"></i>
+      <div class="text">
+        <p>users</p>
+        <span id="userCount"></span>
+      </div>
+    </div>
+  </div>
+<!-- ========= Counter Boxes End ======================================================================================================================== -->
+
+
+
+
+<!-- ========= Adding Admin Form Begin ======================================================================================================================== -->
+  <div class="w-75 m-auto py-5 " id="addAdminForm">
+        <div class="mb-4">
+            <label for="AdminName" class="mb-3 fs-5">Admin Name</label>
+            <input type="text" id="AdminName" class="form-control ">
+        </div>
+        <div class="mb-4"> 
+            <label for="AdminEmail" class="mb-3 fs-5">Admin Email</label>
+            <input type="email" id="AdminEmail" class="form-control ">
+        </div>
+        <div class="mb-4">
+            <label for="eventLocation" class="mb-3 fs-5">Admin Permitions</label>
+            <div class="select">
+              <input type="checkbox" name="" id="addEvent">
+              <label for="">Add Events</label>
+              <input type="checkbox" name="" id="update">
+              <label for="">Update Events</label>
+              <input type="checkbox" name="" id="delete">
+              <label for="">Delete Events</label>
+              <input type="checkbox" name="" id="addAdmin">
+              <label for="">Add Super Admin</label>
+            </div>
+        </div>
+        <div class="mb-4 select">
+            <label for="eventLocation" class="mb-3 fs-5">Admin Type</label>
+            <select name="" id="adminType">
+              <option value="Admin">Admin</option>
+              <option value="superAdmin">Super Admin</option>
+            </select>
+        </div>
+          <button class="btn butt " onclick="Admins()">+ Add Admin</button>
+  </div>
+<!-- ========= Adding Admin Form End ======================================================================================================================== -->
+
+
+
+
+
+
+
+<!-- ========= Super Admin Table List Begin ======================================================================================================================== -->
+  <div class="tb table-responsive superAdminList" id="superAdminList">
+    <h3>Super Admin List</h3>
+  <table class="table text-center table-hover w-75 m-auto py-5">
+    <thead>
+        <tr>
+          <th rowspan="2">Admin Name</th>
+        <th rowspan="2">Email</th>
+        <th colspan="4">Permitions</th>
+        <th rowspan="2" >Type</th>
+        <td rowspan="2"></td>
+        </tr>
+        <tr>
+        <th>Add</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>Add Admin</th>
+      </tr>
+    </thead>
+    <tbody id="tBodySuperAdmin">
+        <tr>
+            <td>Mohamed Yahia</td>
+            <td>mohamedyahiad8@gmail.com</td>
+            <td>All</td>
+            <td>All</td>
+            <td>All</td>
+            <td>All</td>
+            <td>Super Admin</td>
+            <td><button class="btn btn-outline-danger" onclick="deleteSuperAdmin()"><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+<!-- ========= Super Admin Table List End ======================================================================================================================== -->
+
+  
+
+
+
+<!-- ========= Admin Table List Begin ======================================================================================================================== -->
+  <div class="tb table-responsive adminList" id="adminList">
+    <h3>Admin List</h3>
+  <table class="table text-center table-hover w-75 m-auto py-5">
+    <thead>
+        <tr>
+          <th rowspan="2">Admin Name</th>
+        <th rowspan="2">Email</th>
+        <th colspan="4">Permitions</th>
+        <th rowspan="2" >Type</th>
+        <td rowspan="2"></td>
+        </tr>
+        <tr>
+        <th>Add</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>Add Admin</th>
+      </tr>
+    </thead>
+    <tbody id="tBodyAdmin">
+        <tr>
+            <td>Mohamed Yahia</td>
+            <td>mohamedyahiad8@gmail.com</td>
+            <td>All</td>
+            <td>All</td>
+            <td>All</td>
+            <td>All</td>
+            <td>Super Admin</td>
+            <td><button class="btn btn-outline-danger" onclick="deleteAdmin()"><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+<!-- ========= Admin Table List End ======================================================================================================================== -->
+
+
+
+
+<!-- ========= User Table List Begin ======================================================================================================================== -->
+  <div class="tb table-responsive userList" id="userList">
+    <h3>User List</h3>
+  <table class="table text-center table-hover w-75 m-auto py-5">
+    <thead>
+          <th >User Count</th>
+          <th >User Name</th>
+        <th >Email</th>
+        <th ></th>
+    </thead>
+    <tbody id="tBodyUser">
+        <tr>
+            <td>1</td>
+            <td>Mohamed Yahia</td>
+            <td>mohamedyahiad8@gmail.com</td>
+            <td><button class="btn btn-outline-danger" onclick="deleteUser()"><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+<!-- ========= User Table List End ======================================================================================================================== -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="java/superAdminDashboard.js"></script>
+  </body>
+</html>

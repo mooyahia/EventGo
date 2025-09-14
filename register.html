@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/Register.css" />
+  </head>
+  <body>
+ <!-- ============= Logo & Header Section =============================================================================================================================================================== -->
+    <section>
+      <div class="register-form-box">
+        <div class="register-form-value">
+          <form action="">
+            <div class="logo">
+              <img src="images/logo.png" alt="" width="80px" height="50px" />
+            </div>
+            <h2>Create Account</h2>
+
+
+ <!-- ============= Full Name Section =============================================================================================================================================================== -->
+
+            <div class="fName registerationInput">
+              <input type="text" id="fName" placeholder=" " />
+              <label for="fName">First Name</label>
+            </div>
+            <div class="mName registerationInput">
+              <input type="text" id="mName" placeholder=" "/>
+              <label for="mName">Middel Name</label>
+            </div>
+            <div class="lName registerationInput">
+              <input type="text" id="lName" placeholder=" "/>
+              <label for="lName">Last Name</label>
+            </div>
+
+
+ <!-- ============= Email Section =============================================================================================================================================================== -->
+
+            <div class="email registerationInput">
+              <input type="email" id="email" placeholder=" "/>
+              <label for="email">Email</label>
+            </div>
+             <!-- ============= Email Exists Alert ========================== -->
+              <div class="emailAlert" id="emailAlert"><span  ><i class="fa-solid fa-circle-exclamation" style="color: black;"></i></span>  <span>Email already exists</span> </div>
+            
+
+
+<!-- ============= Password Section =============================================================================================================================================================== -->
+              <div class="password registerationInput">
+              <i
+                class="fa-solid fa-eye-slash"
+                id="eyeslash-icon"
+                onclick="show()"
+              ></i>
+              <i class="fa-solid fa-eye" id="eye-icon" onclick="show()"></i>
+              <input type="password" id="password" placeholder=" "/>
+              <label for="password" id="passlabel">Password</label>
+            </div>
+             <!-- ============= Password Validation Alert ========================== -->
+            <div class="passAlert" id="passAlert">
+              <div>Password Must Contains At least</div>
+              <div id="xmarkCapital"><span ><i class="fa-solid fa-xmark"></i></span><span>One Capital Letter</span></div>
+              <div id="xmarkSmall"><span ><i class="fa-solid fa-xmark"></i></span><span>One Small Letter</span></div>
+              <div id="xmarkNumbers"><span ><i class="fa-solid fa-xmark"></i></span><span>One Number</span></div>
+              <div id="xmarkSymbol"><span ><i class="fa-solid fa-xmark"></i></span><span>One Symbol</span></div>
+              <div id="xmarkLength"><span ><i class="fa-solid fa-xmark"></i></span><span>8 digits length</span></div>
+            </div>
+
+<!-- ============= Password Confirmation Section =============================================================================================================================================================== -->
+            <div class="passwordConfirmation registerationInput">
+              <input type="password" id="passwordConfirmation" placeholder=" "/>
+              <label for="passwordConfirmation">Confirm Password</label>
+            </div>
+             <!-- ============= Password Confirmation Validation Alert ========================== -->
+            <div id="passConfirmAlert" class="passConfirmAlert"><span><i class="fa-solid fa-xmark"></i></span><span>Passwords Are Not matches</span></div>
+
+
+<!-- ============= Birthdate Section =============================================================================================================================================================== -->
+                          <div class="birthDate registerationInput">
+              <input type="date" id="birthDate" dir="rtl" placeholder=" "/>
+              <label for="birthDate">Birth Date</label>
+            </div>
+
+
+ <!-- ============= Register Button & Login Link Section =============================================================================================================================================================== -->
+            <div class="btn">
+              <button type="button" onclick="addInformation()"><a href="">Register</a></button>
+              <p>Have an account? <a href="login.html">Login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- <script src="java/login.js"></script> -->
+    <script src="java/Register.js"></script>
+  </body>
+</html>

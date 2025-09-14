@@ -1,2 +1,2 @@
 # EventGo
-Event Go For Events Booking
+EventGo For Events Booking

@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --main-color: #1c66a4;
+  --secondry-color: #154d71;
+  --third-color: #33a1e0;
+  --text-color: #f6f6f6;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--text-color);
+}
+.navbar ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 50px;
+  font-size: 18px;
+  transition-duration: 0.5s;
+}
+.dropdown-menu {
+  border-radius: 12px;
+  border: none;
+}
+.dropdown-menu .dropdown-item {
+  margin-left: 0;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  transition-duration: 0.3s;
+  border-radius: 8px;
+}
+.navbar ul li a:hover {
+  color: var(--secondry-color);
+  font-size: 20px;
+  border-bottom: var(--secondry-color) 3px solid;
+}
+
+.profile-icon,
+.superAdminDashboardLink,
+.adminDashboardLink{
+  display: none;
+}
+body {
+  background-color: var(--text-color);
+  color: #333;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 15px;
+  color: #222;
+}
+section {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+header {
+  text-align: center;
+  padding: 30px 0 10px 0;
+  margin-top: 100px;
+}
+header h1 {
+  font-size: 28px;
+  color: var(--main-color);
+}
+.profile-img img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border: 3px solid var(--secondry-color);
+  margin-bottom: 15px;
+}
+.account-settings form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.account-settings label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.account-settings input {
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+.account-settings button {
+  width: fit-content;
+  margin: 5px auto;
+  padding: 10px 37px;
+  background-color: var(--third-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.account-settings button:hover {
+  background-color: var(--secondry-color);
+}
+.bookings ul {
+  list-style-type: none;
+  padding: 0;
+}
+.bookings li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-left: 5px solid var(--main-color);
+  border-radius: 6px;
+  font-size: 15px;
+}
+.btnn {
+  display: block;
+  margin: 20px auto;
+  background-color: var(--third-color);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+}
+.btnn:hover {
+  background-color: var(--secondry-color);
+}
+.footer {
+  background-color: var(--main-color);
+  color: white;
+  padding: 40px 20px 10px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-section ul {
+  list-style: none;
+}
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+.footer-section ul li a:hover,
+.social-icons a:hover {
+  color: var(--secondry-color);
+  border-bottom: 3px solid var(--secondry-color);
+}
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ddd;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid #444;
+  font-size: 16px;
+}
+
+@media (max-width: 470px) {
+.footer-container{
+  display: grid;
+}
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+}
