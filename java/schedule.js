@@ -221,7 +221,7 @@ window.onload = function () {
     document.getElementById("Contact").style.display = "none";
   }
 };
-window.onload = function (){
+function events(){
     localStorage.setItem("eventData", JSON.stringify(eventContainer));
   eventContainer = JSON.parse(localStorage.getItem("eventData"));
   if (eventContainer.length==0 || eventContainer==null){
@@ -248,4 +248,6 @@ window.onload = function (){
       
     localStorage.setItem("eventData", JSON.stringify(eventContainer));
   }
-}
+
+};
+events();
