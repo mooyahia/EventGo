@@ -70,3 +70,109 @@ window.onload = function () {
         document.getElementById("Contact").style.display = "none";
   }
 };
+
+
+
+
+// ============= Local Storage Begin ===============================================================================================================================================================
+
+// ==================== User information Container in Local Storage=================
+var personalInformation = localStorage.getItem("personalInformation");
+if (personalInformation === null || personalInformation === "undefined") {
+  personalInformation = [];
+} else {
+  personalInformation = JSON.parse(personalInformation);
+}
+
+// ==================== Admin Container in Local Storage=================
+
+var AdminContainer;
+if (
+  localStorage.getItem("AdminContainer") === null ||
+  localStorage.getItem("AdminContainer") === "undefined"
+) {
+  AdminContainer = [];
+} else {
+  AdminContainer = JSON.parse(localStorage.getItem("AdminContainer"));
+}
+
+// ==================== Super Admin Container in Local Storage=================
+var SuperAdminContainer;
+if (
+  localStorage.getItem("SuperAdminContainer") === null ||
+  localStorage.getItem("SuperAdminContainer") === "undefined"
+) {
+  SuperAdminContainer = [];
+} else {
+  SuperAdminContainer = JSON.parse(localStorage.getItem("SuperAdminContainer"));
+}
+
+// ============= Local Storage End ===============================================================================================================================================================
+
+// ==================== Set Testing  Accounts in Local Storage=================
+function testing ()  {
+  for (i = 0; i == personalInformation.length; i--) {
+    var Informations = {
+      firstName: "Event",
+      middleName: "Go",
+      lastName: "User",
+      name: "Event Go User",
+      email: "user@gmail.com",
+      Password: "EventGo1#",
+      BirthDate: "30-80-2025",
+    };
+
+    personalInformation.push(Informations);
+    localStorage.setItem(
+      "personalInformation",
+      JSON.stringify(personalInformation)
+    );
+    if (i < 0) {
+      break;
+    }
+  };
+
+    for (i = 0; i == AdminContainer.length; i--) {
+    var Informations = {
+      firstName: "Event",
+      middleName: "Go",
+      lastName: "Admin",
+      name: "Event Go Admin",
+      email: "eventgo@gmail.com",
+      Password: "EventGo1#",
+      BirthDate: "30-80-2025",
+    };
+
+    AdminContainer.push(Informations);
+    localStorage.setItem(
+      "AdminContainer",
+      JSON.stringify(AdminContainer)
+    );
+    if (i < 0) {
+      break;
+    }
+  };
+
+    for (i = 0; i == SuperAdminContainer.length; i--) {
+    var Informations = {
+      firstName: "Event",
+      middleName: "Go",
+      lastName: "Super Admin",
+      name: "Event Go SuperAdmin",
+      email: "eventgo1213@gmail.com",
+      Password: "EventGo1#",
+      BirthDate: "30-80-2025",
+    };
+
+    SuperAdminContainer.push(Informations);
+    localStorage.setItem(
+      "SuperAdminContainer",
+      JSON.stringify(SuperAdminContainer)
+    );
+    if (i < 0) {
+      break;
+    }
+  }
+};
+
+testing();
