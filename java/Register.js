@@ -20,32 +20,6 @@ let passConfirmAlert = document.getElementById("passConfirmAlert");
 
 // ============= Local Storage Begin ===============================================================================================================================================================
 
-// ==================== Set Super Admin Account in Local Storage=================
-window.onload = () => {
-  for (i = 0; i == SuperAdminContainer.length; i--) {
-    var Informations = {
-      firstName: "Event",
-      middleName: "Go",
-      lastName: "Admin",
-      name: "Event Go Admin",
-      email: "eventgo1213@gmail.com",
-      Password: "EventGo1#",
-      BirthDate: "30-80-2025",
-    };
-
-    SuperAdminContainer.push(Informations);
-    localStorage.setItem(
-      "SuperAdminContainer",
-      JSON.stringify(SuperAdminContainer)
-    );
-    if (i < 0) {
-      break;
-    }
-  }
-};
-
-
-
 // ==================== User information Container in Local Storage=================
 var personalInformation = localStorage.getItem("personalInformation");
 if (personalInformation === null || personalInformation === "undefined") {
@@ -282,4 +256,5 @@ function clearInfo() {
   birthDate.value = "";
 }
 // ==== Clear Registeration Information From Form After Register End ============================================================================================================================================
+
 
